@@ -78,6 +78,10 @@ const sound = useSound(notice);
 
 const StartCountDown = () => {
   if (form.value.count <= 0) return;
+  if (countDownInterval.value) {
+    clearInterval(countDownInterval.value);
+    countDownInterval.value = null;
+  }
 
   switch (form.value.type) {
     case CountDownType.Seconds:
