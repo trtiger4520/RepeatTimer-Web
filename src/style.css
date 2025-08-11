@@ -1,3 +1,59 @@
+/* Material Theme variables (light) */
+:root {
+  --color-primary: #435e91;
+  --color-on-primary: #ffffff;
+  --color-surface: #f9f9ff;
+  --color-on-surface: #1a1b20;
+  --color-surface-variant: #e0e2ec;
+  --color-on-surface-variant: #44474e;
+  --color-outline: #74777f;
+  --color-error: #ba1a1a;
+}
+
+/* Dark scheme */
+html.dark {
+  --color-primary: #acc7ff;
+  --color-on-primary: #0e2f60;
+  --color-surface: #111318;
+  --color-on-surface: #e2e2e9;
+  --color-surface-variant: #44474e;
+  --color-on-surface-variant: #c4c6d0;
+  --color-outline: #8e9099;
+  --color-error: #ffb4ab;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+body.undone {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
+}
+
+/* Scrollbar subtle */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-variant);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-outline);
 }
